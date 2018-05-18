@@ -1,10 +1,10 @@
 require './memento.rb'
-# class for library
-class Library
+# class for author
+class Author
 
   include MementoLibrary
 
   def to_s
-    'library'
+    'author'
   end
 end

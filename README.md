@@ -27,5 +27,5 @@ Used in the development:<br>
 * RubyGarage lessons slide
 
 Run:
-<br>/library$ ruby library.rb # creation of .json files will happen automatically if permissions on the directory root_folder_app_library/storage/json/ are allowed.
-<br> Data is expected from the user (~.js - ajax) in the format .json or at Ruby language (demo in the library.rb - #Test data)
+<br>/library$ ruby test.rb # creation of .json files will happen automatically if permissions on the directory ./storage/json/ are allowed and read the tasks info from the Analytics class.
+<br> Data is expected from the user (~.js - ajax) in the format .json or at Ruby language (demo in the test.rb - #Test data)
