@@ -2,7 +2,9 @@ require './memento.rb'
 # class for read statistics library
 class Analytics
 
-  FILE_FOR_ANALYTICS = 'order'
+  def to_s
+    'order'
+  end
 
   include MementoLibrary
 
@@ -22,7 +24,7 @@ class Analytics
 
   def grouper(key)
     result = []
-    parse_json(FILE_FOR_ANALYTICS).each { |x| result.push x[key] }
+    parse_json.each { |x| result.push x[key] }
     result.inject(Hash.new{ 0 }){ |result, i|
       result[i] += 1
       result

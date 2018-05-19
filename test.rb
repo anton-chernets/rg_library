@@ -11,22 +11,22 @@ require './analytics.rb'
 
 # for example .json format
 author = Author.new
-puts "#{author} #{author.write(author.to_s,'{ "id": "1","name": "Kon","biography": "Lorem ipsum" }')}"
+puts "#{author} #{author.write('{ "id": "1","name": "Kon","biography": "Lorem ipsum" }')}"
 # for example data in array ruby
 book = Book.new
-puts "#{book} #{book.write(book.to_s, '[{ "id" => "1", "title" => "book title", "author" => "1" }, { "id" => "2", "title" => "book title2", "author" => "1" }]')}"
+puts "#{book} #{book.write('[{ "id" => "1", "title" => "book title", "author" => "1" }, { "id" => "2", "title" => "book title2", "author" => "1" }]')}"
 reader = Reader.new
-puts "#{reader} #{reader.write(reader.to_s, '{ "id" => "1", "name" => "Den", "email" => "a@a.a", "sity" => "Dnipro", "street" => "Fabra", "house" => "25" }')}"
+puts "#{reader} #{reader.write('{ "id" => "1", "name" => "Den", "email" => "a@a.a", "sity" => "Dnipro", "street" => "Fabra", "house" => "25" }')}"
 order = Order.new
-puts "#{order} #{order.write(order.to_s, '[{"book":"2","reader":"2","date":"2018-05-03 16:35:52 +0300"}, {"book":"2","reader":"1","date":"2018-05-03 16:35:52 +0300"}, {"book":"1","reader":"2","date":"2018-05-03 16:35:52 +0300"}, {"book":"3","reader":"2","date":"2018-05-03 16:35:52 +0300"}, {"book":"3","reader":"2","date":"2018-05-03 16:35:52 +0300"}]')}"
+puts "#{order} #{order.write('[{"book":"2","reader":"2","date":"2018-05-03 16:35:52 +0300"}, {"book":"2","reader":"1","date":"2018-05-03 16:35:52 +0300"}, {"book":"1","reader":"2","date":"2018-05-03 16:35:52 +0300"}, {"book":"3","reader":"2","date":"2018-05-03 16:35:52 +0300"}, {"book":"3","reader":"2","date":"2018-05-03 16:35:52 +0300"}]')}"
 library = Library.new
-puts "#{library} #{library.write(library.to_s, '"books": { "id" =>  ["1", "2"]}, "orders": { "id" =>  ["1"]}, "readers": { "id" =>  ["1"]}, "authors": { "id" =>  [1]}')}"
+puts "#{library} #{library.write('"books": { "id" =>  ["1", "2"]}, "orders": { "id" =>  ["1"]}, "readers": { "id" =>  ["1"]}, "authors": { "id" =>  [1]}')}"
 
 
 # Get all Library data from files
 
 library = Library.new
-puts "#{library} info: #{library.read(library.to_s)}"
+puts "#{library} info: #{library.read}"
 
 # Who often takes the book
 
